@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec. 8, 2019, 8:16:29 p.m.
+    Author     : monal
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov. 12, 2019, 7:08:33 p.m.
+    Author     : monal
+*/
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.fixbar {
+    width: 100%;
+    height:30px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right:0 ;
+    height: 30px;
+    background: red;
+    z-index: 1;
+}
+#search {
+    position: absolute;
+    right:20px;
+    top: 0px;
+    width: 30px;
+    height: 22px;
+    z-index: 2;
+    background:blue;
+
+}
+
+
+
+

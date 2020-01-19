@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Pizza Ordering Form</title>
+    </h:head>
+    <h:body><div style="margin-right:30%">
+            <h:form>
+                <h1 style="margin-right: 10%;">Admin Page</h1>
+      
+                <br/>
+         <h:outputLink value="ManageOrders.jsp" >
+	Manage Orders
+</h:outputLink>
+                 <fieldset>
+                <legend>Add new Toppings:</legend>
+                
+                 <h:outputLabel value="New Tooping Name:"/>  
+                 <h:inputText id="addTopping" required="true" value="#{toppingBean.toppings.name}" requiredMessage="Topping is required"/><br/>
+                 <h:outputLabel value="Topping Price:"/> 
+                 <h:inputText id="addPrice" required="true" value="#{toppingBean.toppings.price}" requiredMessage="Price is required"/><br/>
+                
+                 <br/>
+                 <h:commandButton value="Add topping" action="#{toppingBean.AddTopping()}" style="margin-right: 25%" />
+        
+                   </fieldset>
+                </h:form>
+                <h:form>
+                <fieldset>
+                <legend>Remove Toppings:</legend>
+                 <h:outputLabel value="Topping Id: "/>  
+                 <h:inputText id="remove" required="true" value="#{toppingBean.toppings.toppingsId}" requiredMessage="Topping id is required"/>
+                 <br/>
+                 <h:commandButton value="Delete topping" action="#{toppingBean.RemoveTopping()}" style="margin-right: 25%" />
+                    
+                 
+               
+                   </fieldset>
+                <fieldset>
+                    <legend>Available toppings</legend>
+                    <c:forEach var="toppings" items="#{toppingBean.getAllToppings()}">
+            <h:outputLabel value="Topping's id"/>
+            <h:outputLabel value=" "/>
+            <h:outputLabel value="#{toppings.toppingsId}"/>
+            <h:outputLabel value=" "/>
+            <h:outputLabel value="Topping's name"/>
+            <h:outputLabel value=" "/>
+            <h:outputLabel value="#{toppings.name}"/>
+            <h:outputLabel value=" "/>
+             <h:outputLabel value="Topping's price"/>
+            <h:outputLabel value=" "/>
+            <h:outputLabel value="#{toppings.price}"/>
+            <h:outputLabel value=" "/>
+            <h:outputLabel value="Topping's"/>
+            <h:outputLabel value=" "/>
+            <h:outputLabel value="#{toppings.isActive}"/>
+            <h:outputLabel value=" "/>
+            <h:outputLabel value="Date added"/>
+            <h:outputLabel value=" "/>
+            <h:outputLabel value="#{toppings.createDate}"/><br/><br/>
+            
+        
+        </c:forEach>
+                </fieldset>
+
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
